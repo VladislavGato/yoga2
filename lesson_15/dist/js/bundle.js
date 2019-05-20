@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function calc() {
+let calc = () => {
     // Calc      КАЛЬКУЛЯТОР
 
     // получим два инпута; базу на которой будут отдыхать;
@@ -134,7 +134,7 @@ function calc() {
             totalValue.innerHTML = a * place.options[place.selectedIndex].value;
         }
     });
-}
+};
 
 module.exports = calc;
 
@@ -148,7 +148,7 @@ module.exports = calc;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function forms() {
+let forms = () => {
     // // FORM с промисами
 
     // объект с сообщениями, с различными состояниями нашего запроса
@@ -248,7 +248,7 @@ function forms() {
     //         if (e.target.value.length == 1) e.target.value = '';
     //     }
     // });
-}
+};
 
 module.exports = forms;
 
@@ -263,7 +263,7 @@ module.exports = forms;
 /***/ (function(module, exports) {
 
 // 
-function modal() {
+let modal = () => {
     // Modal ( наше модальное окно)
 
     let overlay = document.querySelector('.overlay');
@@ -288,22 +288,22 @@ function modal() {
         (target.classList.contains('more') || target.classList.contains('description-btn')) ? bindModal(target, 'block', 'hidden') : '';
         (target.classList.contains('popup-close')) ? bindModal(target, 'none', '') : '';
     });
-}
+};
 
 module.exports = modal;
 
 
 /***/ }),
 
-/***/ "./src/js/parts/scroll.js":
-/*!********************************!*\
-  !*** ./src/js/parts/scroll.js ***!
-  \********************************/
+/***/ "./src/js/parts/scrolls.js":
+/*!*********************************!*\
+  !*** ./src/js/parts/scrolls.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // 
-function scroll() {
+let scrolls = () => {
     // плавная анимация
     // достаем все якоря 
     let anchors = document.querySelectorAll('a[href*="#"]');
@@ -320,9 +320,9 @@ function scroll() {
             });
         });
     }
-}
+};
 
-module.exports = scroll;
+module.exports = scrolls;
 
 /***/ }),
 
@@ -334,7 +334,7 @@ module.exports = scroll;
 /***/ (function(module, exports) {
 
 // 
-function slider() {
+let slider = () => {
     ///////    СЛАЙДЕР      Slider
 
     //переменная которая отвечает за то, какой слайд показывается
@@ -408,7 +408,7 @@ function slider() {
             }
         }      
     });
-}
+};
 
 module.exports = slider;
 
@@ -422,7 +422,7 @@ module.exports = slider;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function tabs() {
+let tabs = () => {
     // ТАБЫ 
     let info = document.querySelector('.info-header'), // родитель табов
         tab = document.querySelectorAll('.info-header-tab'), // табы 
@@ -459,7 +459,7 @@ function tabs() {
             } 
         }
     });
-}
+};
 
 module.exports = tabs;
 
@@ -473,7 +473,7 @@ module.exports = tabs;
 /***/ (function(module, exports) {
 
 // 
-function time() {
+let time = () => {
 // Timer
     let deadLine = '2019-06-03'; //наш дэдлайн, по какое время
     
@@ -525,7 +525,7 @@ function time() {
             timeInterval = setInterval(updateClock, 1000);// интервал, каждую секунду запуск функции updateClock 
     };
     setClock('timer', deadLine );
-}
+};
 
 module.exports = time;
 
@@ -548,7 +548,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Timer. устанавливает наши часы
         time = __webpack_require__(/*! ./parts/time.js */ "./src/js/parts/time.js"),
     // плавная анимация
-        scroll = __webpack_require__(/*! ./parts/scroll.js */ "./src/js/parts/scroll.js"),
+        scrolls = __webpack_require__(/*! ./parts/scrolls.js */ "./src/js/parts/scrolls.js"),
     // Calc и валидация input в поле телефона и калькулятор
         calc = __webpack_require__(/*! ./parts/calc.js */ "./src/js/parts/calc.js"),
     //  СЛАЙДЕР      Slider
@@ -563,7 +563,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     tabs();
     time();
-    scroll();
+    scrolls();
     calc();
     slider();
     modal();

@@ -1,5 +1,5 @@
 // 
-function modal() {
+let modal = () => {
     // Modal ( наше модальное окно)
 
     let overlay = document.querySelector('.overlay');
@@ -24,6 +24,6 @@ function modal() {
         (target.classList.contains('more') || target.classList.contains('description-btn')) ? bindModal(target, 'block', 'hidden') : '';
         (target.classList.contains('popup-close')) ? bindModal(target, 'none', '') : '';
     });
-}
+};
 
 module.exports = modal;

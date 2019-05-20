@@ -1,4 +1,4 @@
-function tabs() {
+let tabs = () => {
     // ТАБЫ 
     let info = document.querySelector('.info-header'), // родитель табов
         tab = document.querySelectorAll('.info-header-tab'), // табы 
@@ -35,6 +35,6 @@ function tabs() {
             } 
         }
     });
-}
+};
 
 module.exports = tabs;

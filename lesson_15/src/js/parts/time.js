@@ -1,5 +1,5 @@
 // 
-function time() {
+let time = () => {
 // Timer
     let deadLine = '2019-06-03'; //наш дэдлайн, по какое время
     
@@ -51,6 +51,6 @@ function time() {
             timeInterval = setInterval(updateClock, 1000);// интервал, каждую секунду запуск функции updateClock 
     };
     setClock('timer', deadLine );
-}
+};
 
 module.exports = time;

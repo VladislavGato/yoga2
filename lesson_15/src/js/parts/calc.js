@@ -1,4 +1,4 @@
-function calc() {
+let calc = () => {
     // Calc      КАЛЬКУЛЯТОР
 
     // получим два инпута; базу на которой будут отдыхать;
@@ -39,6 +39,6 @@ function calc() {
             totalValue.innerHTML = a * place.options[place.selectedIndex].value;
         }
     });
-}
+};
 
 module.exports = calc;

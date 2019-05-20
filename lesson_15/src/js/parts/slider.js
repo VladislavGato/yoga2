@@ -1,5 +1,5 @@
 // 
-function slider() {
+let slider = () => {
     ///////    СЛАЙДЕР      Slider
 
     //переменная которая отвечает за то, какой слайд показывается
@@ -73,6 +73,6 @@ function slider() {
             }
         }      
     });
-}
+};
 
 module.exports = slider;

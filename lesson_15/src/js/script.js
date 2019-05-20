@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Timer. устанавливает наши часы
         time = require('./parts/time.js'),
     // плавная анимация
-        scroll = require('./parts/scroll.js'),
+        scrolls = require('./parts/scrolls.js'),
     // Calc и валидация input в поле телефона и калькулятор
         calc = require('./parts/calc.js'),
     //  СЛАЙДЕР      Slider
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     tabs();
     time();
-    scroll();
+    scrolls();
     calc();
     slider();
     modal();

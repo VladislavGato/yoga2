@@ -1,4 +1,4 @@
-function forms() {
+let forms = () => {
     // // FORM с промисами
 
     // объект с сообщениями, с различными состояниями нашего запроса
@@ -98,6 +98,6 @@ function forms() {
     //         if (e.target.value.length == 1) e.target.value = '';
     //     }
     // });
-}
+};
 
 module.exports = forms;
