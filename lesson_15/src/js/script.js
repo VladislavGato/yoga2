@@ -1,21 +1,34 @@
-//  СЮДА  ИМПОРТИРУЕМ
+window.addEventListener('DOMContentLoaded', () => {
 
-// создаем переменную, то есть коробку для чего то
-// и говорю что в неё буду ложить при помощи команды require()? то что экспортируется из файла script.js
-//   ./   означает что мы обращаемся к файлу который находится здесь же, в папке JS
-let myModule = require('./mod'); // в переменной лежит функция конструктор
-// и с помощью неё можем сконструировать новые объекты
+    "use strict"; // переведем весь наш код в строгий режим
 
-let newModule = new myModule(); // теперь здесь объект со всеми его методами 
+    // ТАБЫ 
+    let tabs = require('./parts/tabs.js'),
+    // Timer. устанавливает наши часы
+        time = require('./parts/time.js'),
+    // плавная анимация
+        scroll = require('./parts/scroll.js'),
+    // Calc и валидация input в поле телефона и калькулятор
+        calc = require('./parts/calc.js'),
+    //  СЛАЙДЕР      Slider
+        slider = require('./parts/slider.js'),
+    // Modal ( наше модальное окно)
+        modal = require('./parts/modal.js'),
+    // FORM с промисами
+        forms = require('./parts/forms.js');
 
-console.log(newModule.hello());
-console.log(newModule.goodbye());
-
-// теперь соберем все эти файлы вместе в один рабочий файл
-// используем Webpack.  утилита 
 
 
 
+    tabs();
+    time();
+    scroll();
+    calc();
+    slider();
+    modal();
+    forms();
+
+});
 
 
 
